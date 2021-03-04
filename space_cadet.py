@@ -1,20 +1,13 @@
-# PE8: all imports at the beginning
 import pygame, sys
-
-
-# --- constants ---
 
 WINDOW_SIZE = (1500, 1000)
 bullet_y = 0
 
-# --- classes --- # PEP8: all classes before main part
-
-
 class Player(pygame.sprite.Sprite):
     # PEP8: empty line before method
     def __init__(self):
-        # pygame.sprite.Sprite.__init__(self)  # Python 2 & 3
-        super().__init__()  # only Python 3
+
+        super().__init__() 
         self.health = 3
         self.hits = 0
         self.images = []
@@ -30,8 +23,8 @@ class Player(pygame.sprite.Sprite):
         self.rect.centerx = 377
         self.rect.bottom = 270
 
-        self.is_jump = False  # PEP8: `lower_case_names` for variables
-        self.jump_count = 5  # PEP8: `lower_case_names` for variables
+        self.is_jump = False 
+        self.jump_count = 5 
 
         self.movement = pygame.math.Vector2(0, 0)
         self.speed = pygame.math.Vector2(0, 0)
@@ -432,9 +425,9 @@ game_map = load_map('data/map')
 
 pygame.init()
 
-pygame.mixer.music.load('data/sample_b.wav')
-pygame.mixer.music.play(-1)
-pygame.mixer.music.set_volume(.5)
+# pygame.mixer.music.load('data/sample_b.wav')
+# pygame.mixer.music.play(-1)
+# pygame.mixer.music.set_volume(.5)
 
 pygame.display.set_caption('Space Cadet')
 
@@ -453,7 +446,6 @@ enemy_bullets = []
 all_sprites = pygame.sprite.Group()
 background = Background()
 items =[Item(300,730,0),Item(425,1160,0), Item(1050,160,1),Item(685,1850,2)]
-# - main loop -
 
 font = pygame.font.Font('freesansbold.ttf', 15)
 text = font.render(('HP:' + str(player.health - player.hits - 1)), True, (100,100,200))
@@ -504,7 +496,7 @@ while True:
     text = font.render(('HP:' + str(player.health - player.hits - 1)), True, (100, 100, 200))
 
     all_sprites.add(player, mobs, bullets,items,enemy_bullets,bosses)
-    # - all updates -
+    
     all_sprites.update()
 
     player.movement.update(0, 0)
