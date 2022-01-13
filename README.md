@@ -7,7 +7,7 @@ Work in progress, the goal is to kill the large boss at the after gathering all 
 
 
 -----------------------------------------------------------------------------------------
-Download Instructions:
+Download Instructions (WINDOWS ONLY):
 
 -Download .rar file
 
