@@ -8,7 +8,12 @@ Work in progress, the goal is to kill the large boss at the after gathering all 
 
 -----------------------------------------------------------------------------------------
 Download Instructions:
+
 -Download .rar file
+
 -Extract File to folder
+
 -Navigate to "dist" folder
+
 -Run the "space_cadet.exe" file
+
